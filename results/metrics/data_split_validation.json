@@ -1,0 +1,257 @@
+{
+  "splits": {
+    "train": {
+      "records": 1436,
+      "unique_audio_count": 1436,
+      "missing_audio_references": 0,
+      "missing_audio_examples": [],
+      "question_type_distribution": {
+        "apply_duration": {
+          "count": 134,
+          "percentage": 9.3315
+        },
+        "apply_frequency": {
+          "count": 87,
+          "percentage": 6.0585
+        },
+        "audio tagging": {
+          "count": 112,
+          "percentage": 7.7994
+        },
+        "both": {
+          "count": 32,
+          "percentage": 2.2284
+        },
+        "remember": {
+          "count": 80,
+          "percentage": 5.571
+        },
+        "sound counting": {
+          "count": 172,
+          "percentage": 11.9777
+        },
+        "sound detection": {
+          "count": 650,
+          "percentage": 45.2646
+        },
+        "species": {
+          "count": 50,
+          "percentage": 3.4819
+        },
+        "understand_acoustics": {
+          "count": 87,
+          "percentage": 6.0585
+        },
+        "vocalization": {
+          "count": 32,
+          "percentage": 2.2284
+        }
+      },
+      "duplicates": {
+        "duplicate_audio_ids": 0,
+        "duplicate_qa_records": 0,
+        "examples": {}
+      },
+      "answer_choice_consistency": {
+        "raw_mismatch_count": 0,
+        "raw_mismatch_examples": [],
+        "resolved_by_trailing_punctuation_normalization": 0,
+        "genuinely_malformed_count": 0,
+        "genuinely_malformed_examples": []
+      }
+    },
+    "validation": {
+      "records": 158,
+      "unique_audio_count": 158,
+      "missing_audio_references": 0,
+      "missing_audio_examples": [],
+      "question_type_distribution": {
+        "apply_duration": {
+          "count": 12,
+          "percentage": 7.5949
+        },
+        "apply_frequency": {
+          "count": 7,
+          "percentage": 4.4304
+        },
+        "audio tagging": {
+          "count": 13,
+          "percentage": 8.2278
+        },
+        "both": {
+          "count": 8,
+          "percentage": 5.0633
+        },
+        "remember": {
+          "count": 7,
+          "percentage": 4.4304
+        },
+        "sound counting": {
+          "count": 20,
+          "percentage": 12.6582
+        },
+        "sound detection": {
+          "count": 71,
+          "percentage": 44.9367
+        },
+        "species": {
+          "count": 1,
+          "percentage": 0.6329
+        },
+        "understand_acoustics": {
+          "count": 15,
+          "percentage": 9.4937
+        },
+        "vocalization": {
+          "count": 4,
+          "percentage": 2.5316
+        }
+      },
+      "duplicates": {
+        "duplicate_audio_ids": 0,
+        "duplicate_qa_records": 0,
+        "examples": {}
+      },
+      "answer_choice_consistency": {
+        "raw_mismatch_count": 0,
+        "raw_mismatch_examples": [],
+        "resolved_by_trailing_punctuation_normalization": 0,
+        "genuinely_malformed_count": 0,
+        "genuinely_malformed_examples": []
+      }
+    },
+    "test": {
+      "records": 2466,
+      "unique_audio_count": 2415,
+      "missing_audio_references": 0,
+      "missing_audio_examples": [],
+      "question_type_distribution": {
+        "apply_duration": {
+          "count": 21,
+          "percentage": 0.8516
+        },
+        "apply_frequency": {
+          "count": 30,
+          "percentage": 1.2165
+        },
+        "audio detection": {
+          "count": 2,
+          "percentage": 0.0811
+        },
+        "audio tagging": {
+          "count": 40,
+          "percentage": 1.6221
+        },
+        "both": {
+          "count": 1665,
+          "percentage": 67.5182
+        },
+        "remember": {
+          "count": 65,
+          "percentage": 2.6358
+        },
+        "sound counting": {
+          "count": 112,
+          "percentage": 4.5418
+        },
+        "sound detection": {
+          "count": 455,
+          "percentage": 18.4509
+        },
+        "species": {
+          "count": 16,
+          "percentage": 0.6488
+        },
+        "understand_acoustics": {
+          "count": 23,
+          "percentage": 0.9327
+        },
+        "vocalization": {
+          "count": 37,
+          "percentage": 1.5004
+        }
+      },
+      "duplicates": {
+        "duplicate_audio_ids": 51,
+        "duplicate_qa_records": 51,
+        "examples": {
+          "dev_audio_00741": 2,
+          "dev_audio_01262": 2,
+          "dev_audio_01263": 2,
+          "dev_audio_01264": 2,
+          "dev_audio_01265": 2,
+          "dev_audio_01266": 2,
+          "dev_audio_01267": 2,
+          "dev_audio_01268": 2,
+          "dev_audio_01269": 2,
+          "dev_audio_01270": 2,
+          "dev_audio_01271": 2,
+          "dev_audio_01272": 2,
+          "dev_audio_01273": 2,
+          "dev_audio_01274": 2,
+          "dev_audio_01275": 2,
+          "dev_audio_01276": 2,
+          "dev_audio_01277": 2,
+          "dev_audio_01278": 2,
+          "dev_audio_01279": 2,
+          "dev_audio_01280": 2
+        }
+      },
+      "answer_choice_consistency": {
+        "raw_mismatch_count": 13,
+        "raw_mismatch_examples": [
+          "dev_aqa_1106",
+          "dev_aqa_1152",
+          "dev_aqa_1169",
+          "dev_aqa_141",
+          "dev_aqa_149",
+          "dev_aqa_1565",
+          "dev_aqa_164",
+          "dev_aqa_168",
+          "dev_aqa_170",
+          "dev_aqa_175",
+          "dev_aqa_181",
+          "dev_aqa_320",
+          "dev_aqa_614"
+        ],
+        "resolved_by_trailing_punctuation_normalization": 8,
+        "genuinely_malformed_count": 5,
+        "genuinely_malformed_examples": [
+          "dev_aqa_1152",
+          "dev_aqa_1169",
+          "dev_aqa_149",
+          "dev_aqa_1565",
+          "dev_aqa_614"
+        ]
+      }
+    }
+  },
+  "overlaps": {
+    "test__train": {
+      "count": 0,
+      "audio_ids": []
+    },
+    "test__validation": {
+      "count": 0,
+      "audio_ids": []
+    },
+    "train__validation": {
+      "count": 0,
+      "audio_ids": []
+    }
+  },
+  "leakage_detail": [],
+  "question_types_missing_from_train": [
+    {
+      "split": "validation",
+      "question_types": []
+    },
+    {
+      "split": "test",
+      "question_types": [
+        "audio detection"
+      ]
+    }
+  ],
+  "ok": true
+}

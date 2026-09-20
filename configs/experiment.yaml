@@ -1,0 +1,11 @@
+experiment_id: qwen2_audio_lora_dcase_part1_100epoch_seed42
+description: Qwen2-Audio-7B-Instruct LoRA fine-tuning for Audio Context Layer Audio QA.
+dataset_config: configs/dataset.yaml
+model_config: configs/model.yaml
+training_config: configs/training.yaml
+results_dir: results
+checkpoints_dir: checkpoints
+notes:
+  - Training is not run during repository initialization.
+  - Results must only be populated after actual evaluation.
+

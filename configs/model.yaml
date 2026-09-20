@@ -1,0 +1,10 @@
+model_name: Qwen/Qwen2-Audio-7B-Instruct
+sampling_rate: 16000
+from_pretrained_kwargs:
+  device_map: auto
+  torch_dtype: auto
+  trust_remote_code: true
+generation:
+  max_new_tokens: 64
+  do_sample: false
+

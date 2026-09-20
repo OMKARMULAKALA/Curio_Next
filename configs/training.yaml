@@ -1,0 +1,47 @@
+seed: 42
+output_dir: checkpoints/qwen2_audio_lora
+best_model_dir: checkpoints/best
+num_train_epochs: 100
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+gradient_accumulation_steps: 8
+learning_rate: 0.00002
+weight_decay: 0.0
+warmup_ratio: 0.03
+logging_steps: 10
+save_total_limit: 3
+metric_for_best_model: eval_loss
+greater_is_better: false
+fp16: false
+bf16: true
+gradient_checkpointing: true
+report_to: none
+log_file: logs/training_log.jsonl
+early_stopping:
+  enabled: false
+  patience: 10
+# Minimum GPU VRAM (GB) required before training will start. 0 disables the
+# check (require_cuda() still requires a CUDA device to exist at all).
+min_vram_gb: 20
+lora:
+  lora_r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  # Qwen2AudioForConditionalGeneration contains two submodels: `audio_tower`
+  # (Whisper-style encoder, attention projections q_proj/k_proj/v_proj/out_proj)
+  # and `language_model` (Qwen2 decoder, attention q_proj/k_proj/v_proj/o_proj,
+  # MLP gate_proj/up_proj/down_proj). q_proj/k_proj/v_proj exist on BOTH, so
+  # module_scope restricts target_modules matching to the language_model
+  # subtree only, preventing LoRA from silently attaching to the audio
+  # encoder. Set to "all" to explicitly widen scope to the whole model.
+  module_scope: language_model
+  module_scope_prefix: "language_model."
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+

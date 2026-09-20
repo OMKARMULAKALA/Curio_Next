@@ -1,0 +1,17 @@
+dataset_name: dcase_2025_task5_part1_available_local
+dataset_root: dataset/dcase_part1
+audio_root: dataset/dcase_part1/audio
+metadata_root: dataset/dcase_part1/metadata
+splits_root: dataset/dcase_part1/splits
+train_manifest: dataset/dcase_part1/splits/train.jsonl
+validation_manifest: dataset/dcase_part1/splits/validation.jsonl
+test_manifest: dataset/dcase_part1/splits/test.jsonl
+schema:
+  question_field: question
+  choices_field: choices
+  answer_field: answer
+  audio_id_field: audio_id
+  audio_path_field: audio_path
+  question_type_field: question_type
+split_policy: official_train_audio_level_90_10_validation_official_dev_as_test
+

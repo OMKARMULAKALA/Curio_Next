@@ -1,0 +1,44 @@
+# Pinned for reproducibility. Versions marked "verified" were actually
+# installed and exercised (audio decoding, manifest building, dataset
+# validation, smoke tests) in this repository's .venv on a CPU-only machine
+# -- see docs/experiments.md. Versions marked "range, untested here" are
+# documented-compatible ranges for the GPU training machine and must be
+# confirmed at the GPU smoke-test step (see README.md Pre-Training Checklist)
+# since this development machine has no CUDA GPU to exercise them against
+# the actual Qwen2-Audio-7B-Instruct weights.
+
+# --- verified in this repository's .venv ---
+torch==2.4.1
+torchaudio==2.4.1
+librosa==0.10.2.post1
+soundfile==0.12.1      # REQUIRES libsndfile>=1.2.0 (bundled by this wheel) for
+                        # native MP3 decoding -- ~32% of the test-split audio
+                        # is MPEG/MP3 data saved with a .wav extension (see
+                        # docs/dataset.md). An older soundfile/libsndfile
+                        # build will fail to decode those files.
+numpy==2.5.3
+scikit-learn==1.9.1
+pyyaml==6.0.2
+
+# --- verified by direct inspection of the installed package's source
+#     (Qwen2AudioForConditionalGeneration, audio_tower/language_model
+#     submodule and attention-projection naming -- see src/models/lora.py),
+#     but not exercised end-to-end on this machine (no GPU) ---
+transformers==4.45.2
+tokenizers>=0.20,<0.21  # transformers==4.45.2's own dependency floor
+
+# --- documented-compatible ranges, to be confirmed at the GPU smoke test ---
+accelerate>=0.34.0,<0.35.0
+peft>=0.13.0,<0.14.0
+
+# --- reporting / notebooks / plotting; version-insensitive for this project ---
+pandas>=2.2.0,<2.3.0
+matplotlib>=3.9.0,<3.10.0
+seaborn>=0.13.0,<0.14.0
+jupyter>=1.0.0,<2.0.0
+ipykernel>=6.29.0,<7.0.0
+
+# NOTE: the previous requirements.txt listed `datasets` (the HuggingFace
+# `datasets` library); it is not imported anywhere in src/scripts/notebooks
+# (AudioQADataset is a plain torch.utils.data.Dataset over the project's own
+# JSONL manifests) and has been removed rather than pinned unused.
